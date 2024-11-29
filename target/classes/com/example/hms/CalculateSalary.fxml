@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.CalculateSalaryController">
+   <children>
+      <Label layoutX="256.0" layoutY="57.0" text="Username" />
+      <Label layoutX="231.0" layoutY="95.0" text="Years of Experience" />
+      <Label layoutX="231.0" layoutY="141.0" text="Number of Operations" />
+      <Label layoutX="222.0" layoutY="182.0" text="Number of Appointments" />
+      <Label layoutX="251.0" layoutY="225.0" text="Initial Salary" />
+      <AnchorPane prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #add8e6;">
+         <children>
+            <Label layoutX="5.0" layoutY="14.0" text="Calculate Salary" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_calc" alignment="CENTER" layoutX="8.0" layoutY="176.0" prefHeight="18.0" prefWidth="186.0" textFill="WHITE">
+               <font>
+                  <Font name="Elephant" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="img_salary" fitHeight="114.0" fitWidth="150.0" layoutX="35.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../java/com/example/hms/pics/Bill-Icon-PNG-Transparent-Image.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtf_email" layoutX="368.0" layoutY="53.0" promptText="Enter username or email" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="txtf_yoe" layoutX="369.0" layoutY="91.0" promptText="Years of experience" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="txtf_numOfOP" layoutX="369.0" layoutY="137.0" promptText="Number of operations" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #7ab1c1;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="txtf_numOfApp" layoutX="369.0" layoutY="178.0" promptText="Number of appointments" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="txtf_initialSal" layoutX="368.0" layoutY="221.0" promptText="Initial salary" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Button fx:id="btn_calc" layoutX="268.0" layoutY="319.0" mnemonicParsing="false" onAction="#CalculateSal" style="-fx-background-color: #7ab1c1;" text="Calculate" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btn_update" layoutX="359.0" layoutY="319.0" mnemonicParsing="false" onAction="#UpdateDoc" style="-fx-background-color: #7ab1c1;" text="Update" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btn_back" layoutX="444.0" layoutY="319.0" mnemonicParsing="false" onAction="#GoToAdminLogin" style="-fx-background-color: #7ab1c1;" text="Back" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</AnchorPane>

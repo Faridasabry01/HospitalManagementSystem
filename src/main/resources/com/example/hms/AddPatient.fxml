@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.AddPatientController">
+   <children>
+      <Label layoutX="40.0" layoutY="113.0" text="Name" />
+      <Label layoutX="51.0" layoutY="158.0" text="Id" />
+      <TextField fx:id="txtf_name" layoutX="92.0" layoutY="109.0" promptText="Name" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="txtf_id" layoutX="92.0" layoutY="154.0" promptText="Id" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Button fx:id="btn_add" layoutX="473.0" layoutY="356.0" mnemonicParsing="false" onAction="#AddPatient" style="-fx-background-color: #7ab1c1;" text="Add" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label fx:id="lbl_successadd" layoutX="390.0" layoutY="288.0" prefHeight="18.0" prefWidth="165.0" />
+      <Label layoutX="42.0" layoutY="337.0" text="Age" />
+      <HBox layoutX="1.0" prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: #add8e6;">
+         <children>
+            <AnchorPane prefHeight="86.0" prefWidth="603.0">
+               <children>
+                  <Label alignment="TOP_CENTER" layoutX="232.0" layoutY="29.0" text="Add Patient" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="img_patient" fitHeight="69.0" fitWidth="78.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/com/example/hms/pics/patient-icon-png-21.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children></HBox>
+      <Label layoutX="42.0" layoutY="200.0" text="Address" />
+      <Label layoutX="42.0" layoutY="243.0" text="E-mail" />
+      <Label layoutX="12.0" layoutY="289.0" text="Phone number" />
+      <Label layoutX="326.0" layoutY="113.0" text="Gender" />
+      <Label layoutX="326.0" layoutY="167.0" text="Room" />
+      <Label layoutX="326.0" layoutY="209.0" text="Blood Type" />
+      <TextField fx:id="txtf_address" layoutX="93.0" layoutY="196.0" promptText="Address" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="txtf_email" layoutX="93.0" layoutY="239.0" promptText="E-mail" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="txtf_phonenum" layoutX="94.0" layoutY="285.0" promptText="Phone number" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="txtf_age" layoutX="95.0" layoutY="333.0" promptText="Age" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="txtf_room" layoutX="389.0" layoutY="163.0" promptText="Room" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <RadioButton fx:id="rd_male" layoutX="388.0" layoutY="113.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="tglGender" />
+         </toggleGroup>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <RadioButton fx:id="rd_female" layoutX="492.0" layoutY="113.0" mnemonicParsing="false" text="Female" toggleGroup="$tglGender">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <ComboBox fx:id="cmb_bloodType" layoutX="388.0" layoutY="209.0" prefHeight="26.0" prefWidth="180.0" promptText="-Select Blood Type-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Button fx:id="btn_back" layoutX="528.0" layoutY="356.0" mnemonicParsing="false" onAction="#GoToAdminLoggedIn" style="-fx-background-color: #7ab1c1;" text="Back" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="326.0" layoutY="265.0" text="Bill" />
+      <TextField fx:id="txtf_bill" layoutX="390.0" layoutY="261.0" promptText="Bill" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;" />
+   </children>
+</AnchorPane>

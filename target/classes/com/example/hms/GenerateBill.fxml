@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.GenerateBillController">
+   <children>
+      <Label layoutX="265.0" layoutY="123.0" text="Number of Days" />
+      <Label layoutX="252.0" layoutY="169.0" text="Number of Operations" />
+      <Label layoutX="259.0" layoutY="214.0" text="Other Expenses" />
+      <Label layoutX="258.0" layoutY="261.0" text="Type of Room" />
+      <TextField fx:id="txtf_numOfDays" layoutX="376.0" layoutY="119.0" promptText="Number of Days" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="txtf_numOfOps" layoutX="376.0" layoutY="165.0" promptText="Number of Operations" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="txtf_otherExpenses" layoutX="376.0" layoutY="210.0" promptText="Other Expenses" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <ComboBox fx:id="cmb_roomType" layoutX="369.0" layoutY="257.0" prefHeight="26.0" prefWidth="164.0" promptText="-Select Type of Room-">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Button fx:id="btn_generate" layoutX="268.0" layoutY="330.0" mnemonicParsing="false" onAction="#GenerateBill" style="-fx-background-color: #7ab1c1;" text="Calculate" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btn_back" layoutX="451.0" layoutY="330.0" mnemonicParsing="false" onAction="#GoToAdminLogin" style="-fx-background-color: #7ab1c1;" text="Back" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <AnchorPane prefHeight="400.0" prefWidth="230.0" style="-fx-background-color: #add8e6;">
+         <children>
+            <Label layoutX="3.0" layoutY="38.0" prefHeight="28.0" prefWidth="248.0" text="Calculate Patient Bill" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_bill" alignment="CENTER" layoutX="5.0" layoutY="200.0" onDragDetected="#GenerateBill" prefHeight="18.0" prefWidth="242.0" textFill="WHITE">
+               <font>
+                  <Font name="Elephant" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="img_bill" fitHeight="89.0" fitWidth="94.0" layoutX="82.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../java/com/example/hms/pics/Bill-Icon-PNG-Transparent-Image.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <Button fx:id="btn_update" layoutX="369.0" layoutY="330.0" mnemonicParsing="false" onAction="#Update" style="-fx-background-color: #7ab1c1;" text="Update" textFill="WHITE" />
+      <Label layoutX="286.0" layoutY="71.0" text="Username" />
+      <TextField fx:id="txtf_email" layoutX="377.0" layoutY="67.0" promptText="Enter username or email" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;" />
+   </children>
+</AnchorPane>

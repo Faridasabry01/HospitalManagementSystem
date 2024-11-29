@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.RemovePatientController">
+   <children>
+      <Label layoutX="223.0" layoutY="93.0" text="Username" />
+      <Label layoutX="231.0" layoutY="164.0" text="Id" />
+      <TextField fx:id="txtf_email" layoutX="287.0" layoutY="89.0" promptText="Enter username or email" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="txtf_id" layoutX="287.0" layoutY="160.0" promptText="Enter password or id" style="-fx-background-color: transparent; -fx-border-color: #7ab1c1; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Button fx:id="btn_remove" layoutX="456.0" layoutY="269.0" mnemonicParsing="false" onAction="#RemovePatient" style="-fx-background-color: #7ab1c1;" text="Remove" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label fx:id="lbl_removed" layoutX="212.0" layoutY="251.0" />
+      <AnchorPane prefHeight="401.0" prefWidth="200.0" style="-fx-background-color: #add8e6;">
+         <children>
+            <Label layoutX="5.0" layoutY="49.0" text="Remove Patients" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="img_remove" fitHeight="75.0" fitWidth="95.0" layoutX="59.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../java/com/example/hms/pics/x-icon-png-0.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <Button fx:id="btn_back" layoutX="466.0" layoutY="325.0" mnemonicParsing="false" onAction="#GoToAdminLogin" style="-fx-background-color: #7ab1c1;" text="Back" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</AnchorPane>
